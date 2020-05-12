@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Руслан Ибрагимов](https://up.htmlacademy.ru/htmlcss/28/user/405799).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
