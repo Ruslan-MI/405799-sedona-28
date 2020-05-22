@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -28,7 +29,62 @@
     <h1 class="visually-hidden">Список гостиниц</h1>
     <section class="filter">
       <h2 class="visually-hidden">Выберите желаемые параметры</h2>
-      <!-- Здесь будет фильтр предложений -->
+      <form action="https://echo.htmlacademy.ru" method="POST" oninput="max_price_output.value=max_price.value">
+        <!-- <div class="first-column"> -->
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <input type="checkbox" name="pool" id="pool" checked>
+            <label for="pool">Бассейн</label>
+            <input type="checkbox" name="parking" id="parking">
+            <label for="parking">Парковка</label>
+            <input type="checkbox" name="wi-fi" id="wi-fi">
+            <label for="wi-fi">Wi-Fi</label>
+          </fieldset>
+        <!-- </div> -->
+        <!-- <div class="second-column"> -->
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" name="apartments" id="apartments" checked>
+            <label for="apartments">Апартаменты</label>
+          </fieldset>
+        <!-- </div> -->
+        <!-- <div class="third-column"> -->
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <div class="outputs">
+              <span>От <output name="min_price">0</output></span>
+              <span class="border-left">До <output name="max_price_output">3000</output></span>
+            </div>
+            <input type="range" name="max_price" min="0" max="4000" step="100" value="3000">
+          </fieldset>
+          <button type="submit">Показать</button>
+        <!-- </div> -->
+      </form>
+    </section>
+    <section class="sorting">
+      <h2 class="visually-hidden">Выберите очерёдность отображения</h2>
+      <!-- <div class="first-column"> -->
+        <p>Найдено:<output name="amount">3</output></p>
+      <!-- </div> -->
+      <!-- <div class="second-column"> -->
+        <h3 class="visually-hidden">Сортировка:</h3>
+        <ul>
+          <li><button type="button">По цене</button></li>
+          <li><button type="button">По типу</button></li>
+          <li><button type="button">По рейтингу</button></li>
+        </ul>
+      <!-- </div> -->
+      <!-- <div class="third-column"> -->
+        <h3 class="visually-hidden">Порядок:</h3>
+        <ul>
+          <li><button type="button"><span class="visually-hidden">▲</span></button></li>
+          <li><button type="button"><span class="visually-hidden">▼</span></button></li>
+        </ul>
+      <!-- </div> -->
     </section>
     <section class="hotels-list">
       <h2 class="visually-hidden">Ознакомьтесь с подходящими предложениями</h2>
@@ -39,7 +95,9 @@
             <p>Гостиница</p>
             <span class="price">От 4000 Р.</span>
             <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & SPA">
-            <span class="stars">****</span>
+            <span class="stars">
+              <span class="visually-hidden">****</span>
+            </span>
             <span class="rating">Рейтинг 8,5</span>
             <a href="blanc.html">Подробнее</a>
             <a href="blanc.html">Забронировать</a>
@@ -51,7 +109,9 @@
             <p>Мотель</p>
             <span class="price">От 3000 Р.</span>
             <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <span class="stars">***</span>
+            <span class="stars">
+              <span class="visually-hidden">***</span>
+            </span>
             <span class="rating">Рейтинг 8,9</span>
             <a href="blanc.html">Подробнее</a>
             <a href="blanc.html">Забронировать</a>
@@ -63,7 +123,9 @@
             <p>Апартаменты</p>
             <span class="price">От 2000 Р.</span>
             <img src="img/villas.jpg" width="135" height="90" alt="Villas At Poco Diablo">
-            <span class="stars">**</span>
+            <span class="stars">
+              <span class="visually-hidden">**</span>
+            </span>
             <span class="rating">Рейтинг 9,2</span>
             <a href="blanc.html">Подробнее</a>
             <a href="blanc.html">Забронировать</a>

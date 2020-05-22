@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -122,8 +123,33 @@
 
   <section>
     <h2 class="visually-hidden">Выберите даты и количество мест</h2>
-    <!-- Здесь будет форма с четырьмя полями и подписями  -->
-    <button type="submit">Найти</button>
+    <form action="https://echo.htmlacademy.ru" method="GET">
+      <p class="date-in">
+        <label for="date-in">Дата заезда:</label>
+        <input type="text" id="date-in" name="date-in" value="24 апреля 2017" required>
+        <button type="button" class="calendar"><span class="visually-hidden">Выбрать</span></button>
+      </p>
+      <p class="date-out">
+        <label for="date-out">Дата выезда:</label>
+        <input type="text" id="date-out" name="date-out" value="4 июля 2017" required>
+        <button type="button" class="calendar"><span class="visually-hidden">Выбрать</span></button>
+      </p>
+      <p class="adults-and-children">
+        <span class="half-width">
+          <label for="adults">Взрослые:</label>
+          <button type="button" class="minus"><span class="visually-hidden">-</span></button>
+          <input type="text" id="adults" name="adults" value="1" pattern="[0-9]{2}" required>
+          <button type="button" class="plus"><span class="visually-hidden">+</span></button>
+        </span>
+        <span class="half-width">
+          <label for="children">Дети:</label>
+          <button type="button" class="minus"><span class="visually-hidden">-</span></button>
+          <input type="text" id="children" name="children" value="0" pattern="[0-9]{2}" required>
+          <button type="button" class="plus"><span class="visually-hidden">+</span></button>
+        </span>
+      </p>
+      <button type="submit">Найти</button>
+    </form>
   </section>
 
 </body>
