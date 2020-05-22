@@ -31,59 +31,74 @@
       <h2 class="visually-hidden">Выберите желаемые параметры</h2>
       <form action="https://echo.htmlacademy.ru" method="POST" oninput="max_price_output.value=max_price.value">
         <!-- <div class="first-column"> -->
-          <fieldset>
-            <legend>Инфраструктура:</legend>
-            <input type="checkbox" name="pool" id="pool" checked>
-            <label for="pool">Бассейн</label>
-            <input type="checkbox" name="parking" id="parking">
-            <label for="parking">Парковка</label>
-            <input type="checkbox" name="wi-fi" id="wi-fi">
-            <label for="wi-fi">Wi-Fi</label>
-          </fieldset>
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="pool" id="pool" checked>
+              <label for="pool">Бассейн</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking" id="parking">
+              <label for="parking">Парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wi-fi" id="wi-fi">
+              <label for="wi-fi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
         <!-- </div> -->
         <!-- <div class="second-column"> -->
-          <fieldset>
-            <legend>Тип жилья:</legend>
-            <input type="checkbox" name="hotel" id="hotel" checked>
-            <label for="hotel">Гостиница</label>
-            <input type="checkbox" name="motel" id="motel" checked>
-            <label for="motel">Мотель</label>
-            <input type="checkbox" name="apartments" id="apartments" checked>
-            <label for="apartments">Апартаменты</label>
-          </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="hotel" id="hotel" checked>
+              <label for="hotel">Гостиница</label>
+            </li>
+            <li>
+              <input type="checkbox" name="motel" id="motel" checked>
+              <label for="motel">Мотель</label>
+            </li>
+            <li>
+              <input type="checkbox" name="apartments" id="apartments" checked>
+              <label for="apartments">Апартаменты</label>
+            </li>
+        </fieldset>
         <!-- </div> -->
         <!-- <div class="third-column"> -->
-          <fieldset>
-            <legend>Стоимость в сутки (Р):</legend>
-            <div class="outputs">
-              <span>От <output name="min_price">0</output></span>
-              <span class="border-left">До <output name="max_price_output">3000</output></span>
-            </div>
-            <input type="range" name="max_price" min="0" max="4000" step="100" value="3000">
-          </fieldset>
-          <button type="submit">Показать</button>
+        <fieldset>
+          <legend>Стоимость в сутки (Р):</legend>
+          <div class="outputs">
+            <span>От <output name="min_price">0</output></span>
+            <span class="border-left">До <output name="max_price_output">3000</output></span>
+          </div>
+          <input type="range" name="max_price" min="0" max="4000" step="100" value="3000">
+        </fieldset>
+        <button type="submit">Показать</button>
         <!-- </div> -->
       </form>
     </section>
     <section class="sorting">
       <h2 class="visually-hidden">Выберите очерёдность отображения</h2>
       <!-- <div class="first-column"> -->
-        <p>Найдено:<output name="amount">3</output></p>
+      <p>Найдено:<output name="amount">3</output></p>
       <!-- </div> -->
       <!-- <div class="second-column"> -->
-        <h3 class="visually-hidden">Сортировка:</h3>
-        <ul>
-          <li><button type="button">По цене</button></li>
-          <li><button type="button">По типу</button></li>
-          <li><button type="button">По рейтингу</button></li>
-        </ul>
+      <h3 class="visually-hidden">Сортировка:</h3>
+      <ul>
+        <li><button type="button">По цене</button></li>
+        <li><button type="button">По типу</button></li>
+        <li><button type="button">По рейтингу</button></li>
+      </ul>
       <!-- </div> -->
       <!-- <div class="third-column"> -->
-        <h3 class="visually-hidden">Порядок:</h3>
-        <ul>
-          <li><button type="button"><span class="visually-hidden">▲</span></button></li>
-          <li><button type="button"><span class="visually-hidden">▼</span></button></li>
-        </ul>
+      <h3 class="visually-hidden">Порядок:</h3>
+      <ul>
+        <li><button type="button"><span class="visually-hidden">▲</span></button></li>
+        <li><button type="button"><span class="visually-hidden">▼</span></button></li>
+      </ul>
       <!-- </div> -->
     </section>
     <section class="hotels-list">
