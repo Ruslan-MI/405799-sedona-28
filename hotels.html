@@ -65,22 +65,23 @@
               <input type="checkbox" name="apartments" id="apartments" checked>
               <label for="apartments">Апартаменты</label>
             </li>
+          </ul>
         </fieldset>
         <!-- </div> -->
         <!-- <div class="third-column"> -->
         <fieldset>
           <legend>Стоимость в сутки (Р):</legend>
           <!-- <div class="prices"> -->
-            <ul>
-              <li>
-                <label for="min_price">От</label>
-                <input type="text" name="min_price" id="min_price" value="0" pattern="[0-9]{1,4}">
-              </li>
-              <li class="border-left">
-                <label for="max_price">До</label>
-                <input type="text" name="max_price" id="max_price" value="3000" pattern="[0-9]{1,4}">
-              </li>
-            </ul>
+          <ul>
+            <li>
+              <label for="min_price">От</label>
+              <input type="text" name="min_price" id="min_price" value="0" pattern="[0-9]{1,4}">
+            </li>
+            <li class="border-left">
+              <label for="max_price">До</label>
+              <input type="text" name="max_price" id="max_price" value="3000" pattern="[0-9]{1,4}">
+            </li>
+          </ul>
           <!-- </div> -->
           <input type="range" name="max_price_range" min="0" max="4000" step="100" value="3000">
         </fieldset>
