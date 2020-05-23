@@ -29,7 +29,7 @@
     <h1 class="visually-hidden">Список гостиниц</h1>
     <section class="filter">
       <h2 class="visually-hidden">Выберите желаемые параметры</h2>
-      <form action="https://echo.htmlacademy.ru" method="POST" oninput="max_price_output.value=max_price.value">
+      <form action="https://echo.htmlacademy.ru" method="GET" oninput="max_price_output.value=max_price.value">
         <!-- <div class="first-column"> -->
         <fieldset>
           <legend>Инфраструктура:</legend>
@@ -71,7 +71,7 @@
         <fieldset>
           <legend>Стоимость в сутки (Р):</legend>
           <div class="outputs">
-            <span>От <output name="min_price">0</output></span>
+            <span>От <output name="min_price_output">0</output></span>
             <span class="border-left">До <output name="max_price_output">3000</output></span>
           </div>
           <input type="range" name="max_price" min="0" max="4000" step="100" value="3000">
