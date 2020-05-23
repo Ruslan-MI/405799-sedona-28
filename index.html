@@ -126,12 +126,12 @@
     <form action="https://echo.htmlacademy.ru" method="GET">
       <p class="date-in">
         <label for="date-in">Дата заезда:</label>
-        <input type="text" id="date-in" name="date-in" value="24 апреля 2017" required>
+        <input type="text" id="date-in" name="date-in" value="24 апреля 2017" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" required>
         <button type="button" class="calendar"><span class="visually-hidden">Выбрать</span></button>
       </p>
       <p class="date-out">
         <label for="date-out">Дата выезда:</label>
-        <input type="text" id="date-out" name="date-out" value="4 июля 2017" required>
+        <input type="text" id="date-out" name="date-out" value="4 июля 2017" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" required>
         <button type="button" class="calendar"><span class="visually-hidden">Выбрать</span></button>
       </p>
       <p class="adults-and-children">
