@@ -343,11 +343,11 @@ img {
   margin: 0;
 }
 
-.hotels-list li {
+.hotels-list .hotels-item {
   border-bottom: 1px var(--dim-border) solid;
 }
 
-.hotels-list li:first-child {
+.hotels-list .hotels-item:first-child {
   border-top: 1px var(--dim-border) solid;
 }
 
@@ -368,7 +368,7 @@ img {
   color: var(--dark-text);
 }
 
-.stars::before {
+.star::before {
   content: url(../img/star.svg);
 }
 
