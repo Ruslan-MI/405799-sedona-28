@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -25,11 +27,15 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="index-main">
     <h1 class="visually-hidden">«City of Sedona»</h1>
     <section class="welcome">
-      <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
-      <img src="img/welcome.svg" width="457" height="351" alt="Welcome to the gorgeous Sedona">
+      <div class="mountain">
+        <div class="shape">
+          <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+          <img src="img/welcome.svg" width="457" height="351" alt="Welcome to the gorgeous Sedona">
+        </div>
+      </div>
       <p>
         Седона - небольшой городок в Аризоне, заслуживающий большего!
       </p>
@@ -38,9 +44,11 @@
       <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2>
       <ol>
         <li class="reasons-item with-image">
-          <h3>Настоящий городок</h3>
-          <span class="item-number">-№1-</span>
-          <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+          <div>
+            <h3>Настоящий городок</h3>
+            <span class="item-number">-№1-</span>
+            <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
           <img src="img/street.jpg" width="800" height="256" alt="Улица Седоны">
           <!-- Начало вложенного списка -->
           <div class="other-reasons">
@@ -63,9 +71,11 @@
           <!-- Конец вложенного списка -->
         </li>
         <li class="reasons-item with-image">
-          <h3>Там есть Мост Дьявола</h3>
-          <span class="item-number">-№2-</span>
-          <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+          <div>
+            <h3>Там есть Мост Дьявола</h3>
+            <span class="item-number">-№2-</span>
+            <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+          </div>
           <img src="img/devil's_bridge.jpg" width="800" height="256" alt="Мост Дьявола">
         </li>
         <li class="reasons-item">
@@ -93,7 +103,7 @@
       <p>
         Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне
       </p>
-      <button type="button">Поиск гостиницы в Седоне</button>
+      <button type="button" class="button dark">Поиск гостиницы в Седоне</button>
       <div class="state-map">
         <img src="img/state-map.jpg" width="1199" height="594" alt="Карта штата">
       </div>
@@ -110,9 +120,9 @@
     <section class="social-networks">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul>
-        <li><a href="#"><span class="visually-hidden">Twitter</span></a></li>
-        <li><a href="#"><span class="visually-hidden">Facebook</span></a></li>
-        <li><a href="#"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="twitter button bright"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="facebook button bright"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="youtube button bright"><span class="visually-hidden">YouTube</span></a></li>
       </ul>
     </section>
     <p>
@@ -121,18 +131,20 @@
     </p>
   </footer>
 
-  <section>
+  <section class="search-form">
     <h2 class="visually-hidden">Выберите даты и количество мест</h2>
     <form action="https://echo.htmlacademy.ru" method="GET">
       <p class="date-in">
         <label for="date-in">Дата заезда:</label>
-        <input type="text" id="date-in" name="date-in" value="24 апреля 2017" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" required>
-        <button type="button" class="calendar"><span class="visually-hidden">Выбрать</span></button>
+        <input type="text" id="date-in" name="date-in" value="24 апреля 2017"
+          pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" required>
+        <button type="button" class="calendar"><span class="visually-hidden">Открыть календарь</span></button>
       </p>
       <p class="date-out">
         <label for="date-out">Дата выезда:</label>
-        <input type="text" id="date-out" name="date-out" value="4 июля 2017" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" required>
-        <button type="button" class="calendar"><span class="visually-hidden">Выбрать</span></button>
+        <input type="text" id="date-out" name="date-out" value="4 июля 2017"
+          pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" required>
+        <button type="button" class="calendar"><span class="visually-hidden">Открыть календарь</span></button>
       </p>
       <p class="adults-and-children">
         <span class="half-width">
@@ -148,7 +160,7 @@
           <button type="button" class="plus"><span class="visually-hidden">+</span></button>
         </span>
       </p>
-      <button type="submit">Найти</button>
+      <button type="submit" class="button bright">Найти</button>
     </form>
   </section>
 

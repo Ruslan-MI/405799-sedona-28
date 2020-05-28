@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -25,7 +27,7 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="hotels-main">
     <h1 class="visually-hidden">Список гостиниц</h1>
     <section class="filter">
       <h2 class="visually-hidden">Выберите желаемые параметры</h2>
@@ -74,16 +76,16 @@
           <!-- <div class="prices"> -->
           <ul>
             <li>
-              <label for="min_price">От</label>
-              <input type="text" name="min_price" id="min_price" value="0" pattern="[0-9]{1,4}">
+              <label for="min-price">От</label>
+              <input type="text" name="min-price" id="min-price" value="0" pattern="[0-9]{1,4}">
             </li>
             <li>
-              <label for="max_price">До</label>
-              <input type="text" name="max_price" id="max_price" value="3000" pattern="[0-9]{1,4}">
+              <label for="max-price">До</label>
+              <input type="text" name="max-price" id="max-price" value="3000" pattern="[0-9]{1,4}">
             </li>
           </ul>
           <!-- </div> -->
-          <input type="range" name="max_price_range" min="0" max="4000" step="100" value="3000">
+          <input type="range" name="max-price-range" min="0" max="4000" step="100" value="3000">
         </fieldset>
         <button type="submit">Показать</button>
         <!-- </div> -->
@@ -91,68 +93,68 @@
     </section>
     <section class="sorting">
       <h2 class="visually-hidden">Выберите очерёдность отображения</h2>
-      <!-- <div class="first-column"> -->
-      <p>Найдено: <span class="amount">3</span></p>
-      <!-- </div> -->
-      <!-- <div class="second-column"> -->
-      <h3>Сортировка:</h3>
-      <ul>
-        <li><a href="#">По цене</a></li>
-        <li><a href="#">По типу</a></li>
-        <li><a href="#">По рейтингу</a></li>
-      </ul>
-      <!-- </div> -->
-      <!-- <div class="third-column"> -->
-      <h3 class="visually-hidden">Порядок:</h3>
-      <ul>
-        <li><a href="#"><span class="visually-hidden">По возрастанию</span></a></li>
-        <li><a href="#"><span class="visually-hidden">По убыванию</span></a></li>
-      </ul>
-      <!-- </div> -->
+      <div class="first-column">
+        <p>Найдено: <span class="amount">3</span></p>
+      </div>
+      <div class="second-column">
+        <h3>Сортировка:</h3>
+        <ul>
+          <li><a>По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
+        </ul>
+      </div>
+      <div class="third-column">
+        <h3 class="visually-hidden">Порядок:</h3>
+        <ul>
+          <li><a href="#" class="ascending"><span class="visually-hidden">По возрастанию</span></a></li>
+          <li><a class="descending"><span class="visually-hidden">По убыванию</span></a></li>
+        </ul>
+      </div>
     </section>
     <section class="hotels-list">
       <h2 class="visually-hidden">Ознакомьтесь с подходящими предложениями</h2>
       <ul>
-        <li class="list-item">
+        <li>
           <article>
             <h3><a href="blanc.html">Amara Resort & SPA</a></h3>
             <p>Гостиница</p>
             <span class="price">От 4000 Р.</span>
             <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & SPA">
             <span class="stars">
-              <span class="visually-hidden">****</span>
+              <span class="visually-hidden">Четыре звезды</span>
             </span>
             <span class="rating">Рейтинг 8,5</span>
-            <a href="blanc.html">Подробнее</a>
-            <a href="blanc.html">Забронировать</a>
+            <a href="blanc.html" class="button bright">Подробнее</a>
+            <a href="blanc.html" class="button dark">Забронировать</a>
           </article>
         </li>
-        <li class="list-item">
+        <li>
           <article>
             <h3><a href="blanc.html">Desert Quail Inn</a></h3>
             <p>Мотель</p>
             <span class="price">От 3000 Р.</span>
             <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
             <span class="stars">
-              <span class="visually-hidden">***</span>
+              <span class="visually-hidden">Три звезды</span>
             </span>
             <span class="rating">Рейтинг 8,9</span>
-            <a href="blanc.html">Подробнее</a>
-            <a href="blanc.html">Забронировать</a>
+            <a href="blanc.html" class="button bright">Подробнее</a>
+            <a href="blanc.html" class="button dark">Забронировать</a>
           </article>
         </li>
-        <li class="list-item">
+        <li>
           <article>
             <h3><a href="blanc.html">Villas At Poco Diablo</a></h3>
             <p>Апартаменты</p>
             <span class="price">От 2000 Р.</span>
             <img src="img/villas.jpg" width="135" height="90" alt="Villas At Poco Diablo">
             <span class="stars">
-              <span class="visually-hidden">**</span>
+              <span class="visually-hidden">Две звезды</span>
             </span>
             <span class="rating">Рейтинг 9,2</span>
-            <a href="blanc.html">Подробнее</a>
-            <a href="blanc.html">Забронировать</a>
+            <a href="blanc.html" class="button bright">Подробнее</a>
+            <a href="blanc.html" class="button dark">Забронировать</a>
           </article>
         </li>
       </ul>
@@ -169,9 +171,9 @@
     <section class="social-networks">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul>
-        <li><a href="#"><span class="visually-hidden">Twitter</span></a></li>
-        <li><a href="#"><span class="visually-hidden">Facebook</span></a></li>
-        <li><a href="#"><span class="visually-hidden">YouTube</span></a></li>
+        <li><a href="#" class="twitter button bright"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a href="#" class="facebook button bright"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href="#" class="youtube button bright"><span class="visually-hidden">YouTube</span></a></li>
       </ul>
     </section>
     <p>

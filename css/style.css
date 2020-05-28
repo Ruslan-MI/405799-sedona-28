@@ -1,10 +1,378 @@
+/* General */
+
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+:root {
+  --general-black: #000000;
+  --general-white: #FFFFFF;
+  --bright-background: #81B3D2;
+  --dark-text: #333333;
+  --dim-icons: #A9A9A9;
+  --body-background: #F2F2F2;
+  --dark-background: #766357;
+  --dim-background: #EEEEEE;
+  --transparent-white: rgba(255, 255, 255, 0.9);
+  --transparent-black: rgba(0, 0, 0, 0.3);
+  --dark-hover: #604E43;
+  --dark-active: #503E33;
+  --ghost-white: rgba(255, 255, 255, 0.3);
+  --bright-hover: #669EC0;
+  --bright-active: #5496BD;
+  --dim-border: #E5E5E5;
+  --dim-arrow: #CACACA;
+  --dim-text: #666666;
+  --field-hover: #EBEBEB;
+  --dim-logo: #BDBBBC;  
+}
+
+body {
+  min-width: 1220px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--general-black);
+  text-transform: uppercase;
+  background-color: var(--body-background);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: inherit;
+  color: var(--general-white);
+  vertical-align: middle;
+  border: none;
+}
+
+.button.dark {
+  background-color: var(--dark-background);
+}
+
+.button.dark:hover, .button.dark:focus {
+  background-color: var(--dark-hover);
+}
+
+.button.dark:active {
+  color: var(--ghost-white);
+  background-color: var(--dark-active);
+}
+
+.button.bright {
+  background-color: var(--bright-background);
+}
+
+.button.bright:hover, .button.bright:focus {
+  background-color: var(--bright-hover);
+}
+
+.button.bright:active {
+  color: var(--ghost-white);
+  background-color: var(--bright-active);
+}
+
+/* Header */
+
+.main-header {
+  background-color: var(--general-white);
+  text-align: center;
+}
+
+.main-header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-header a {
+  color: inherit;
+  font-weight: 700;
+}
+
+.main-header a:hover, .main-header a:focus {
+  color: var(--bright-background);
+}
+
+.main-header a:active {
+  color: var(--transparent-black);
+}
+
+.main-header a:not([href]) {
+  color: var(--dark-background);
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: var(--transparent-white);
+  text-align: center;
+}
+
+.contacts p {
+  font-size: 21px;
+}
+
+.social-networks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.twitter::before {
+  content: url(../img/twitter-logo.svg);
+}
+
+.facebook::before {
+  content: url(../img/facebook-logo.svg);
+}
+
+.youtube::before {
+  content: url(../img/youtube-logo.svg);
+}
+
+.main-footer p a {
+  color: inherit;
+}
+
+/* Index */
+
+/* Main */
+
+.index-main {
+  background-color: var(--general-white);
+  text-align: center;
+}
+
+/* Welcome */
+
+.mountain {
+  background-color: var(--dark-text);
+  background-image: url(../img/background-index.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.shape {
+  background-image: url(../img/shape.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 509px;
+}
+
+.welcome img {
+  margin-top: 77px;
+}
+
+.welcome p {
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 42px;
+}
+
+/* Reasons */
+
+.reasons ul, .reasons ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reasons img, .search img {
+  background-color: var(--dim-icons);
+}
+
+.reasons h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-text);
+}
+
+.reasons-item {
+  line-height: 21px;
+  color: var(--dark-text);
+  background-color: var(--dim-background);
+}
+
+.reasons-item h3, .reasons-item h4 {
+  font-size: 21px;
+  color: var(--general-black);
+}
+
+.with-image div:first-child {
+  color: var(--general-white);
+  background-color: var(--bright-background);
+}
+
+.with-image h3 {
+  color: var(--general-white);
+}
+
+.other-reasons .reasons-item {
+  background-color: var(--general-white);
+}
+
+.house::before {
+  content: url(../img/house.svg);
+}
+
+.burger::before {
+  content: url(../img/burger.svg);
+}
+
+.gift::before {
+  content: url(../img/gift.svg);
+}
+
+/* Search */
+
+.search p b {
+  font-size: 30px;
+}
+
+.search p:nth-child(3) {
+  line-height: 24px;
+  color: var(--dark-text);
+}
+
+.search .button {
+  font-size: 21px;
+}
+
+/* Search-form */
+
+.search-form {
+  display: none;
+}
+
+/* Hotels */
+
+/* Main */
+
+.hotels-main {
+  background-color: var(--general-white);
+}
+
+/* Filter */
+
+.filter {
+  color: var(--general-white);
+  background-color: var(--dark-text);
+  background-image: url(../img/background-hotels.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sorting */
+
+.sorting p {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.sorting h3 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.sorting ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sorting .second-column a {
+  color: var(--transparent-black);
+  font-size: 12px;
+  border-bottom: var(--bright-background) dotted;
+}
+
+.sorting .second-column a:hover, .sorting .second-column a:focus {
+  color: var(--bright-background);
+}
+
+.sorting .second-column a:active {
+  color: var(--general-black);
+  border-bottom: none;
+}
+
+.sorting .second-column a:not([href]) {
+  color: var(--bright-background);
+  border-bottom: none;
+}
+
+.ascending::before {
+  content: url(../img/icon-up.svg);
+}
+
+.descending::before {
+  content: url(../img/icon-up.svg);
+}
+
+/* Hotels-list */
+
+.hotels-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hotels-list li {
+  border-bottom: 1px var(--dim-border) solid;
+}
+
+.hotels-list li:first-child {
+  border-top: 1px var(--dim-border) solid;
+}
+
+.hotels-list h3 a {
+  color: inherit;
+  font-size: 21px;
+}
+
+.hotels-list h3 a:hover, .hotels-list h3 a:focus {
+  color: var(--bright-background);
+}
+
+.hotels-list h3 a:active {
+  color: var(--transparent-black);
+}
+
+.hotels-list p, .price {
+  color: var(--dark-text);
+}
+
+.stars::before {
+  content: url(../img/star.svg);
+}
+
+.rating {
+  color: var(--dim-text);
+  background-color: var(--body-background);
+}
