@@ -31,7 +31,9 @@
   --dim-arrow: #CACACA;
   --dim-text: #666666;
   --field-hover: #EBEBEB;
-  --dim-logo: #BDBBBC;  
+  --dim-logo: #BDBBBC;
+  --general-shadow: rgba(0, 1, 1, 0.2);
+  --full-transparent: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -54,6 +56,13 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.wrapper {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 5px 15px var(--general-shadow);
 }
 
 .button {
@@ -149,6 +158,10 @@ img {
 
 .youtube::before {
   content: url(../img/youtube-logo.svg);
+}
+
+.main-footer p:last-child {
+  margin: 0;
 }
 
 .main-footer p a {
@@ -287,6 +300,59 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filter input[type="checkbox"] + label::before {
+  content: url(../img/checkbox-off.svg);
+}
+
+.filter input[type="checkbox"]:hover + label,
+.filter input[type="checkbox"]:focus + label {
+  border-bottom: 2px dotted var(--general-white);
+}
+
+.filter input[type="checkbox"]:checked + label::before {
+  content: url(../img/checkbox-on.svg);
+}
+
+.filter .third-column ul {
+  border: 2px solid var(--general-white);
+}
+
+.filter .third-column li {
+  display: inline;
+}
+
+.filter .third-column li:last-child {
+  border-left: 2px solid var(--general-white);
+}
+
+.filter .third-column input[type="text"] {
+  border: none;
+  background-color: var(--full-transparent);
+  color: var(--general-white);
+  font: inherit;
+}
+
+.filter button[type="submit"] {
+  font-weight: 400;
+  background-color: var(--full-transparent);
+  border: 2px solid var(--general-white);
+}
+
+.filter button[type="submit"]:hover, .filter button[type="submit"]:focus {
+  color: var(--general-black);
+  background-color: var(--general-white);
+  border: 2px solid var(--general-white);
 }
 
 /* Sorting */
