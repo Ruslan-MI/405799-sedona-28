@@ -499,6 +499,8 @@ img {
   background-color: var(--full-transparent);
   color: var(--general-white);
   font: inherit;
+  width: 100%;
+  padding: 0;
 }
 
 .filter button[type="submit"] {
