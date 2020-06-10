@@ -263,17 +263,18 @@ img {
   background-image: url(../img/background-index.jpg);
   background-repeat: no-repeat;
   background-position: center top;
+  box-sizing: border-box;
+  padding-top: 77px;
+  height: 509px;
 }
 
 .shape {
   background-image: url(../img/shape.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  height: 509px;
-}
-
-.welcome img {
-  margin-top: 77px;
+  height: 100%;
+  position: relative;
+  bottom: -1px;
 }
 
 .welcome p {
@@ -359,15 +360,15 @@ img {
   background-color: var(--general-white);
 }
 
-.house::before {
+.house .reason-description::before {
   content: url(../img/house.svg);
 }
 
-.burger::before {
+.burger .reason-description::before {
   content: url(../img/burger.svg);
 }
 
-.gift::before {
+.gift .reason-description::before {
   content: url(../img/gift.svg);
 }
 
@@ -613,12 +614,12 @@ img {
 }
 
 .ratings {
+  width: 110px;
+  height: 90px;
   margin-left: auto;
-  display: grid;
-}
-
-.stars {
-  margin-bottom: 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .stars-list {
@@ -636,4 +637,5 @@ img {
 .rating {
   color: var(--dim-text);
   background-color: var(--body-background);
+  text-align: center;
 }
