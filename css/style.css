@@ -324,14 +324,11 @@ img {
 }
 
 .reasons-item.with-image {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.reasons-item.with-image {
   color: var(--general-white);
   background-color: var(--bright-background);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .reasons-item.with-image h3 {
@@ -358,7 +355,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.other-reasons .reasons-item {
+.other-reasons-list .reasons-item {
   background-color: var(--general-white);
 }
 
