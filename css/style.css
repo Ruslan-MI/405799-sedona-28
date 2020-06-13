@@ -528,7 +528,7 @@ img {
   margin-bottom: 30px;
 }
 
-.search-input {
+.search-form input[type="text"] {
   box-sizing: border-box;
   width: 346px;
   height: 38px;
@@ -539,11 +539,11 @@ img {
   border: 0;
 }
 
-.search-input:hover {
+.search-form input[type="text"]:hover {
   background-color: var(--field-hover);
 }
 
-.search-input:focus {
+.search-form input[type="text"]:focus {
   background-color: var(--general-white);
   border: 2px solid var(--dim-border);
 }
@@ -578,7 +578,7 @@ img {
   left: 0;
 }
 
-.adults .search-input, .children .search-input {
+.adults input[type="text"], .children input[type="text"] {
   width: 114px;
   padding: 0;
   text-align: center;
