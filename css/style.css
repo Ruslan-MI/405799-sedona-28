@@ -782,6 +782,7 @@ input[type="checkbox"]:focus + .checkbox-label span {
   font: inherit;
   width: 50%;
   padding: 0;
+  outline: none;
 }
 
 .price-range label {
