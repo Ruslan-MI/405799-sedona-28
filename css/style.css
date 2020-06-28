@@ -131,6 +131,31 @@ img {
   fill: var(--bright-background);
 }
 
+/* Animations */
+
+@keyframes expansion {
+  0% {
+    transform: translate(-50%, -100%);
+    clip-path: inset(100% 0% 0% 0%);
+  }
+
+  100% {
+    transform: translate(-50%, 0%);
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+@keyframes narrowing {
+  0% {
+    transform: translate(-50%, 0%);
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+    transform: translate(-50%, -100%);
+    clip-path: inset(100% 0% 0% 0%);
+  }
+}
+
 /* Header */
 
 .main-header {
@@ -295,6 +320,11 @@ img {
   align-items: center;
 }
 
+.developer-link svg {
+  position: relative;
+  top: -2px;
+}
+
 .developer-link path {
   fill: var(--dark-logo);
 }
@@ -328,18 +358,18 @@ img {
   background-repeat: no-repeat;
   background-position: center bottom;
   box-sizing: border-box;
-  padding-top: 76px;
+  padding-top: 66px;
   height: 508px;
   color: var(--general-white);
 }
 
 .shape {
-  background-image: url(../img/shape.svg);
+  background-image: url(../img/shape-custom.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
   height: 100%;
   position: relative;
-  bottom: -1px;
+  bottom: -10px;
 }
 
 .intro {
@@ -420,6 +450,7 @@ img {
 
 .reasons-item.with-image img {
   background-color: var(--dim-icons);
+  object-fit: cover;
 }
 
 .bridge img {
@@ -507,6 +538,7 @@ img {
 
 .search {
   padding-top: 56px;
+  position: relative;
 }
 
 .interested {
@@ -523,11 +555,13 @@ img {
   margin-bottom: 45px;
 }
 
-.search .button {
+.search-popup-open {
   font-size: 21px;
   width: 568px;
   height: 86px;
 }
+
+/* Scroll down for div.search-popup styles */
 
 .state-map {
   width: 100%;
@@ -540,22 +574,31 @@ img {
   background-color: var(--dim-icons);
 }
 
-/* Search-form */
+/* Search-popup */
 
-.search-form {
+.search-popup {
   background-color: var(--general-white);
   box-sizing: border-box;
   width: 568px;
   padding: 55px;
   font-weight: 700;
   position: absolute;
-  top: 2169px;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0px 7px 15px var(--general-shadow);
 }
 
-.search-form form {
+.expansion {
+  animation: expansion 0.3s;
+}
+
+.narrowing {
+  animation: narrowing 0.3s;
+  transform: translate(-50%, -100%);
+  clip-path: inset(100% 0% 0% 0%);
+}
+
+.search-popup form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -575,7 +618,7 @@ img {
   user-select: none;
 }
 
-.search-form input[type="text"] {
+.search-popup input[type="text"] {
   box-sizing: border-box;
   width: 346px;
   height: 38px;
@@ -588,11 +631,11 @@ img {
   text-transform: inherit;
 }
 
-.search-form input[type="text"]:hover {
+.search-popup input[type="text"]:hover {
   background-color: var(--field-hover);
 }
 
-.search-form input[type="text"]:focus {
+.search-popup input[type="text"]:focus {
   background-color: var(--general-white);
   border: 2px solid var(--dim-border);
 }
@@ -639,7 +682,7 @@ img {
   width: 179px;
 }
 
-.search-form .submit {
+.search-form-submit {
   width: 100%;
   height: 58px;
   margin-top: 26px;
@@ -948,7 +991,7 @@ a.button-with-icon:not([href]) path, a.button-with-icon:not([href]):hover path {
   fill: var(--bright-background);
 }
 
-/* Hotels */
+/* Offers */
 
 .hotels-list {
   list-style: none;
@@ -982,6 +1025,7 @@ a.button-with-icon:not([href]) path, a.button-with-icon:not([href]):hover path {
   line-height: 1;
   margin: 0;
   margin-top: -5px;
+  margin-bottom: 5px;
 }
 
 .hotel-header-link {
