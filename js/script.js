@@ -1,3 +1,7 @@
+// Search-popup
+
+// Variables
+
 var searchPopupOpen = document.querySelector(".search-popup-open");
 var searchPopup = document.querySelector(".search-popup");
 var searchForm = searchPopup.querySelector(".search-form");
@@ -11,6 +15,8 @@ var childrenMinus = searchForm.querySelector(".children .minus");
 var childrenPlus = searchForm.querySelector(".children .plus");
 var searchFormSubmit = searchForm.querySelector(".search-form-submit");
 
+// Local Storage check
+
 var isStorageSupport = true;
 var adults = "";
 
@@ -20,8 +26,12 @@ try {
   isStorageSupport = false;
 };
 
+// Initialization
+
 searchPopup.classList.add("visually-hidden");
 searchPopup.classList.add("narrowing");
+
+// Open/Close
 
 searchPopupOpen.addEventListener("click", function () {
   if (searchPopup.classList.contains("visually-hidden")) {
@@ -106,6 +116,8 @@ window.addEventListener("keydown", function (evt) {
   };
 });
 
+// Form buttons and keys
+
 adultsMinus.addEventListener("click", function () {
   if (adultsInput.value > 1) {
     adultsInput.value--;
@@ -172,3 +184,35 @@ searchForm.addEventListener("submit", function (evt) {
     };
   };
 });
+
+// State-map
+
+// Hide map image
+
+document.querySelector(".map-image").classList.add("visually-hidden");
+
+// Add map wrapper
+
+var stateMap = document.querySelector(".state-map");
+var mapWrapper = document.createElement("div");
+
+mapWrapper.classList.add("map-wrapper");
+mapWrapper.id = "map";
+
+stateMap.appendChild(mapWrapper);
+
+// Add Google Maps
+
+var mapScript = document.createElement('script');
+mapScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBSyupZ0960ucVfQie8Zo9ohagG5URMRO0&callback=indexMap';
+mapScript.defer = true;
+mapScript.async = true;
+
+window.indexMap = function () {
+  var sedona = { lat: 34.863701, lng: -111.760233 };
+  var center = { lat: 34.753962, lng: -111.744668 };
+  var map = new google.maps.Map(document.getElementById("map"), { zoom: 9, center: center, disableDefaultUI: true });
+  var marker = new google.maps.Marker({ position: sedona, map: map });
+};
+
+document.body.appendChild(mapScript);
