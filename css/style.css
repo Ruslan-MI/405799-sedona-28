@@ -566,8 +566,11 @@ img {
 .state-map {
   width: 100%;
   height: 593px;
-  background-color: var(--dim-icons);
   color: var(--general-white);
+}
+
+.map-image {
+  background-color: var(--dim-icons);
 }
 
 .map-wrapper {
