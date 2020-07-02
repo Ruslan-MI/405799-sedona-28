@@ -203,14 +203,15 @@ stateMap.appendChild(mapWrapper);
 
 // Add Google Maps
 
-var mapScript = document.createElement('script');
-mapScript.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBSyupZ0960ucVfQie8Zo9ohagG5URMRO0&callback=indexMap';
+var mapScript = document.createElement("script");
+
+mapScript.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBSyupZ0960ucVfQie8Zo9ohagG5URMRO0&callback=indexMap";
 mapScript.defer = true;
 mapScript.async = true;
 
 window.indexMap = function () {
-  var sedona = { lat: 34.863701, lng: -111.760233 };
-  var center = { lat: 34.753962, lng: -111.744668 };
+  var center = { lat: 34.757, lng: -111.737 };
+  var sedona = { lat: 34.866, lng: -111.760 };
   var map = new google.maps.Map(document.getElementById("map"), { zoom: 9, center: center, disableDefaultUI: true });
   var marker = new google.maps.Marker({ position: sedona, map: map });
 };
