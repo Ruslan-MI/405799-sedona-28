@@ -41,7 +41,7 @@
                 <label for="pool" class="checkbox-label"><span>Бассейн</span></label>
               </li>
               <li class="infrastructure-item">
-                <input type="checkbox" class="visually-hidden" name="parking" id="parking" disabled>
+                <input type="checkbox" class="visually-hidden" name="parking" id="parking">
                 <label for="parking" class="checkbox-label"><span>Парковка</span></label>
               </li>
               <li class="infrastructure-item">
@@ -58,7 +58,7 @@
                 <label for="hotel" class="checkbox-label"><span>Гостиница</span></label>
               </li>
               <li class="kinds-item">
-                <input type="checkbox" class="visually-hidden" name="motel" id="motel" checked disabled>
+                <input type="checkbox" class="visually-hidden" name="motel" id="motel" checked>
                 <label for="motel" class="checkbox-label"><span>Мотель</span></label>
               </li>
               <li class="kinds-item">
@@ -86,8 +86,12 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="toggle toggle-min" tabindex="0"
+                  aria-label="выберите минимальную стоимость номера в сутки, ползунок">
+                </div>
+                <div class="toggle toggle-max" tabindex="0"
+                  aria-label="выберите максимальную стоимость номера в сутки, ползунок">
+                </div>
               </div>
             </fieldset>
             <button type="submit" class="button">Показать</button>
@@ -101,15 +105,15 @@
         </div>
         <div class="second-column">
           <h3>Сортировка:</h3>
-          <ul class="sorting-items">
-            <li><a aria-label="сортировать по цене">По цене</a></li>
-            <li><a href="#" aria-label="сортировать по типу">По типу</a></li>
-            <li><a href="#" aria-label="сортировать по рейтингу">По рейтингу</a></li>
+          <ul class="sorting-list">
+            <li class="sorting-item"><a aria-label="сортировать по цене">По цене</a></li>
+            <li class="sorting-item"><a href="#" aria-label="сортировать по типу">По типу</a></li>
+            <li class="sorting-item"><a href="#" aria-label="сортировать по рейтингу">По рейтингу</a></li>
           </ul>
         </div>
         <div class="third-column">
           <h3 class="visually-hidden">Порядок:</h3>
-          <ul class="course-items">
+          <ul class="course-list">
             <li><a href="#" class="ascending button-with-icon" aria-label="сортировать по возрастанию"><svg width="11"
                   height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L0 10h11L5.5 0z" fill="#000" /></svg><span class="visually-hidden">По
