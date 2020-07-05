@@ -50,6 +50,9 @@ searchPopupOpen.addEventListener("click", function () {
       childrenInput.value = 0;
     };
   };
+  if (searchPopup.classList.contains("shake")) {
+    searchPopup.classList.remove("shake");
+  };
   searchPopup.classList.toggle("narrowing");
   searchPopup.classList.toggle("expansion");
   if (searchPopup.classList.contains("expansion")) {
@@ -110,6 +113,9 @@ window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (searchPopup.classList.contains("expansion")) {
       evt.preventDefault();
+      if (searchPopup.classList.contains("shake")) {
+        searchPopup.classList.remove("shake");
+      };
       searchPopup.classList.remove("expansion");
       searchPopup.classList.add("narrowing");
     };
