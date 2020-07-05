@@ -174,9 +174,12 @@ childrenInput.addEventListener("keydown", function (evt) {
   };
 });
 
-searchForm.addEventListener("submit", function (evt) {
-  if (!dateInInput.value || !dateOutInput.value || !adultsInput.value || !childrenInput.value) {
+searchFormSubmit.addEventListener("click", function (evt) {
+  if (!searchForm.checkValidity()) {
     evt.preventDefault();
+    searchPopup.classList.remove("shake");
+    searchPopup.offsetWidth = searchPopup.offsetWidth;
+    searchPopup.classList.add("shake");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("adults", adultsInput.value);
